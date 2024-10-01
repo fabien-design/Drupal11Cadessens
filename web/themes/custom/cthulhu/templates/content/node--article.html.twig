@@ -1,0 +1,14 @@
+<article{{ attributes.addClass('article') }}>
+    {% if label and not page %}
+        <h2{{ title_attributes.addClass('article--title') }}>
+            {{ label }}
+        </h2>
+    {% endif %}
+
+    <div{{ content_attributes.addClass('article--container') }}>
+        {{ content.field_page_banner.0 }}
+        <h2 class="article--title">{{ content.field_page_title.0 }}</h2>
+        {{ content|without('field_page_banner', 'field_page_title') }}
+    </div>
+
+</article>

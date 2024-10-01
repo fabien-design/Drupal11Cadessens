@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+  width: 100%;
+}
+.header-nav .primary-nav__menu-item:hover {
+  color: #c51a21;
+}
+
+#block-cthulhu-main-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#block-cthulhu-main-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+#block-cthulhu-main-menu ul .link--main-menu {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#block-cthulhu-main-menu ul .link--main-menu a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#block-cthulhu-main-menu ul .link--main-menu a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+#block-cthulhu-main-menu ul .link--main-menu a:hover {
+  color: #c51a21;
+}
+#block-cthulhu-main-menu ul .link--main-menu a:hover::after {
+  width: 100%;
+  background-color: #c51a21;
+}
+#block-cthulhu-main-menu ul .link--main-menu a.is-active {
+  color: #c51a21;
+}
+#block-cthulhu-main-menu ul .link--main-menu a.is-active::after {
+  width: 100%;
+  background-color: #c51a21;
+}
+
+.banner--article {
+  width: 100%;
+  height: 100%;
+  background-color: #c51a21;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+  position: relative;
+  color: #ffffff;
+}
+.banner--article .banner--background-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.banner--article .text--banner--article {
+  width: calc(44% - 11.4vw);
+  padding: 10rem 4.4vw 6rem 7vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+.banner--article .text--banner--article h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.banner--article .text--banner--article p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.banner--article .text--banner--article .banner--discover-btn {
+  background-color: #000000;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 1.25rem 1.875rem;
+  margin-left: auto;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+.banner--article .text--banner--article .banner--discover-btn::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0.8rem;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.banner--article .text--banner--article .banner--discover-btn:hover::after {
+  width: calc(100% - 3.75rem);
+}
+.banner--article .banner--right-image {
+  position: absolute;
+  right: 0;
+  width: 56%;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.index-services {
+  padding: 6rem 7vw 4rem;
+}
+.index-services .index-services--title {
+  font-size: 3.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 6rem;
+}
+.index-services .index-services--title::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #c51a21;
+}
+.index-services .index-services--container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+}
+.index-services .index-services--container .index-services--card {
+  min-height: 31.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #fff;
+  grid-column: span 3;
+}
+.index-services .index-services--container .index-services--card:nth-child(4n), .index-services .index-services--container .index-services--card:nth-child(4n+1) {
+  grid-column: span 2;
+}
+.index-services .index-services--container .index-services--card .card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 0 0.2rem #000000;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.index-services .index-services--container .index-services--card .card-image {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  padding: 10px 20px 10px 20px;
+}
+.index-services .index-services--container .index-services--card .card-navigate-container {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0.8rem;
+  padding: 12px 10px;
+  background-color: rgba(197, 26, 33, 0.5);
+  max-width: calc(100% - 2rem);
+}
+.index-services .index-services--container .index-services--card .card-navigate-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+}
+.index-services .index-services--container .index-services--card .card-navigate-container a {
+  padding: 10px 20px;
+  background-color: #c51a21;
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: fit-content;
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.index-services .index-services--container .index-services--card .card-navigate-container a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0.6rem;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.index-services .index-services--container .index-services--card .card-navigate-container a:hover::after {
+  width: calc(100% - 40px);
+}
+
+.contact-button {
+  background-color: #c51a21;
+  padding: 1.25rem 1.875rem;
+  font-size: 2.5rem;
+  margin: 2.5rem auto 5.625rem;
+  width: fit-content;
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  color: #ffffff;
+}
+.contact-button::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0.8rem;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.contact-button:hover::after {
+  width: calc(100% - 3.75rem);
+}
+
+/*# sourceMappingURL=style.css.map */

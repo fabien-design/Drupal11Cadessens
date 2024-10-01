@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'about-section',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			{{ content.field_decouvrir_title }}
+			{{ content.field_about_text }}
+			<div class="about-section--aside">
+				<div class="about-section--aside-image">
+					{{ content.field_aside_image.0 }}
+				</div>
+				<div class="about-section--aside-text">
+					{{ content.field_aside_text.0 }}
+				</div>
+			</div>
+			{{ content.field_footer_text.0 }}
+			{{ content.field_bottom_navigation }}
+		{% endblock %}
+	</div>
+{% endblock paragraph %}

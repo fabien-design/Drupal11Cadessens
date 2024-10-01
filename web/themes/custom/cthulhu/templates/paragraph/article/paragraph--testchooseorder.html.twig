@@ -1,0 +1,42 @@
+{%
+  set classes = [
+    'article-section',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% set asideDirection = content.field_choose_order.0['#markup'] %}
+{% set classDirection = 'center' %}
+{% if asideDirection is same as("text left and img right") %}
+    {% set classDirection = 'left' %}
+{% elseif asideDirection is same as("text right and img left") %}
+    {% set classDirection = 'right' %}
+{% endif %}
+{% set centerContent = (content.field_centrer_contenu.0['#markup'] is same as('Oui')) %}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+        <div class="article-section--aside {{classDirection}}">
+            {% if classDirection == "left" %}    
+                <div class="article-section--aside-text {{ centerContent == true ? 'center' : '' }}">
+                    {{ content.field_body.0 }}
+                </div>
+                <div class="article-section--aside-image">
+                    {{ content.field_aside_image.0 }}
+                </div>
+            {% elseif classDirection == "right" %}
+                <div class="article-section--aside-image">
+                    {{ content.field_aside_image.0 }}
+                </div>
+                <div class="article-section--aside-text {{ centerContent == true ? 'center' : '' }}">
+                    {{ content.field_body.0 }}
+                </div>
+            {% else %}
+                <div class="article-section--aside-text {{ centerContent == true ? 'center' : '' }}">
+                    {{ content.field_body.0 }}
+                </div>
+            {% endif %}
+        </div>
+	</div>
+{% endblock paragraph %}

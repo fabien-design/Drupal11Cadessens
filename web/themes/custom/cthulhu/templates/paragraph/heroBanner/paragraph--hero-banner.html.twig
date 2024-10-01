@@ -1,0 +1,26 @@
+{% set background_image = content.field_background_image.0 %}
+{% set discover_btn = content.field_discover_button.0 %}
+<article{{ attributes.addClass('banner--article') }}>
+  {% if background_image is not empty %}
+    {% set img_url = background_image['#item'].entity.uri.value %}
+    {% set img_alt = background_image['#item'].alt %}
+    <img src="{{ file_url(img_url) }}" alt="{{ img_alt }}" class="banner--background-image">
+  {% endif %}
+  <div{{ content_attributes }} class="text--banner--article">
+    <h1>{{ content.field_title.0['#context'].value }}</h1>
+    <p>{{ content.field_sub_title.0 }}</p>
+    {% if discover_btn is not empty %}
+      {% set url = discover_btn['#url'] %}
+      {% set title = discover_btn['#title'] %}
+      <a href="{{ url }}" class="banner--discover-btn">{{ title }}</a>
+    {% endif %}
+  </div>
+  {# Vérifie si le champ image existe et contient des valeurs #}
+  {% if content.field_right_image.0 is not empty %}
+    {% set right_image = content.field_right_image.0 %}
+    {% set right_image_url = right_image['#item'].entity.uri.value %}
+    {% set right_image_alt = right_image['#item'].alt %}
+    {# Affiche l'mage de droite #}
+    <img src="{{ file_url(right_image_url) }}" alt="{{ right_image_alt }}" class="banner--right-image">
+  {% endif %}
+</article>

@@ -1,0 +1,15 @@
+{% set fieldContent %}
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+{% endset %}
+
+{% if multiple and attributes.toArray is not empty %}
+  <div{{ attributes.addClass('bottom-navigation--container') }}>
+    {{ fieldContent }}
+  </div>
+{% else %}
+    <div  class="bottom-navigation--container">
+        {{ fieldContent }}
+    </div>
+{% endif %}

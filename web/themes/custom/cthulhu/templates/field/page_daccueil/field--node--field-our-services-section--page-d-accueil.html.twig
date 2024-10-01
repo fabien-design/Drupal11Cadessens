@@ -1,0 +1,14 @@
+<article{{attributes.addClass('index-services')}}>
+	{% if label and not page %}
+		<h2 id="services" {{title_attributes.addClass('index-services--title')}}>
+			{{ label }}
+		</h2>
+	{% endif %}
+
+	<div{{content_attributes.addClass('index-services--container')}}>
+		{% for item in items %}
+			{{ item.content }}
+		{% endfor %}
+	</div>
+
+</article>

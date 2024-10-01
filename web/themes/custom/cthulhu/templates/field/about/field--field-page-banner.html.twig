@@ -1,0 +1,4 @@
+{% set media_entity = items[0].content['#item'].entity %}
+{% set image_file = media_entity.fileuri %}
+{% set image_url = file_url(image_file) %}
+<img{{ items[0].attributes.addClass('page--banner') }} src="{{image_url}}" alt="{{ items[0].content['#item'].alt }}" />

@@ -1,0 +1,27 @@
+services:
+  mariadb:
+    image: mariadb:10.6
+    environment:
+        MYSQL_DATABASE: drupal
+        MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - drupal-network
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8888:80
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - drupal-network
+
+volumes:
+  db-data:
+
+networks:
+    drupal-network:
+        driver: bridge

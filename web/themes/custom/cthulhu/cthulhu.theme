@@ -1,0 +1,64 @@
+<?php
+
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function cthulhu_preprocess_node(&$variables) {
+
+  // Vérifie si le node a un champ d'image de fond.
+  if ($variables['node']->hasField('field_background_image')) {
+    $background_image_item = $variables['node']->get('field_background_image')->entity;
+    // Vérifie que l'entité est un Media et qu'elle a le champ d'image.
+    if ($background_image_item instanceof Media && $background_image_item->hasField('field_media_image')) {
+      $fid = $background_image_item->get('field_media_image')->target_id;
+      // Charge le fichier.
+      if ($fid) {
+          $file = File::load($fid);
+        if ($file) {
+          // Obtenir l'URL de l'image.
+          $variables['background_image_url'] = $file->createFileUrl();
+        }
+      }
+    }
+  }
+
+  $field_hero_banner = $variables["elements"]["#node"]->hasField('field_contact');
+  if ($variables["elements"]["#node"] && $field_hero_banner) {
+    $fid = $variables["elements"]["#node"]->get('field_contact')->target_id;
+    if ($fid) {
+      $file = File::load($fid);
+      if ($file) { 
+        $variables['background_image_url'] = $file->createFileUrl();
+      }
+    }
+  }
+}
+
+function cthulhu_preprocess_block(&$variables) {
+  // Vérifie si le champ d'image de fond est défini et non vide.
+  if (isset($variables['content']['field_background_image']) && !empty($variables['content']['field_background_image']['#object']->get('field_background_image')->target_id)) {
+    // Charge l'entité Media à partir de l'ID.
+    $media_id = $variables['content']['field_background_image']['#object']->get('field_background_image')->target_id;
+    $background_image_item = Media::load($media_id);
+
+    
+    // Vérifie que l'entité est un Media et qu'elle a le champ d'image.
+    if ($background_image_item instanceof Media && $background_image_item->hasField('field_media_image')) {
+      $fid = $background_image_item->get('field_media_image')->target_id;
+      
+      // Charge le fichier.
+      if ($fid) {
+        $file = File::load($fid);
+        if ($file) {
+          // Obtenir l'URL de l'image.
+          $variables['background_image_url'] = $file->createFileUrl();
+          $variables['background_image_alt'] = $background_image_item->get('field_media_image')->alt;
+        }
+      }
+    }
+  }
+}
