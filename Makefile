@@ -3,3 +3,6 @@ up:
 
 cr:
 	php ./vendor/bin/drush cr
+
+watch: 
+	sass --watch web/themes/custom/cthulhu/sass
