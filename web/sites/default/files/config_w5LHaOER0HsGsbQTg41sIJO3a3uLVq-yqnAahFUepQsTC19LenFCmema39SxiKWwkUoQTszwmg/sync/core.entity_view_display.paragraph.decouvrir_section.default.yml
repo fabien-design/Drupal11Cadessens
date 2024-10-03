@@ -1,0 +1,71 @@
+uuid: 20ec5fe3-ddf0-438a-a73e-89e9d6a0893d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.decouvrir_section.field_about_text
+    - field.field.paragraph.decouvrir_section.field_aside_image
+    - field.field.paragraph.decouvrir_section.field_aside_text
+    - field.field.paragraph.decouvrir_section.field_bottom_navigation
+    - field.field.paragraph.decouvrir_section.field_decouvrir_title
+    - field.field.paragraph.decouvrir_section.field_footer_text
+    - paragraphs.paragraphs_type.decouvrir_section
+  module:
+    - entity_reference_revisions
+    - media
+    - text
+id: paragraph.decouvrir_section.default
+targetEntityType: paragraph
+bundle: decouvrir_section
+mode: default
+content:
+  field_about_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_aside_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_aside_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_bottom_navigation:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_decouvrir_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_footer_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

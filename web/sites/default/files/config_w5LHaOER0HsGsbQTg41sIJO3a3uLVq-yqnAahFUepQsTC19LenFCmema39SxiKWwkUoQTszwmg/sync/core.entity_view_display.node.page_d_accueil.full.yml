@@ -1,0 +1,51 @@
+uuid: 59621eaa-774e-433a-949b-9d15c9dcb0b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page_d_accueil.field_contact
+    - field.field.node.page_d_accueil.field_hero_banner
+    - field.field.node.page_d_accueil.field_our_services_section
+    - node.type.page_d_accueil
+  module:
+    - entity_reference_revisions
+    - user
+id: node.page_d_accueil.full
+targetEntityType: node
+bundle: page_d_accueil
+mode: full
+content:
+  field_contact:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_hero_banner:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_our_services_section:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

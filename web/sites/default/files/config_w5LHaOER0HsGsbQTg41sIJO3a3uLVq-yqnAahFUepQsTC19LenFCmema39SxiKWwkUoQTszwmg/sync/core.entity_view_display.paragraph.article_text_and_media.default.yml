@@ -1,0 +1,42 @@
+uuid: 87c96a59-f2f2-4f90-8418-56b2ce893645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_text_and_media.field_article_title
+    - field.field.paragraph.article_text_and_media.field_bottom_navigation
+    - field.field.paragraph.article_text_and_media.field_choose_order
+    - paragraphs.paragraphs_type.article_text_and_media
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.article_text_and_media.default
+targetEntityType: paragraph
+bundle: article_text_and_media
+mode: default
+content:
+  field_article_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_bottom_navigation:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_choose_order:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

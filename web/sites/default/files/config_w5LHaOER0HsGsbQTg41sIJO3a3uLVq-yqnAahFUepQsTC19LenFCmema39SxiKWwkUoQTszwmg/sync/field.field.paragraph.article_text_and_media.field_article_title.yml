@@ -1,0 +1,19 @@
+uuid: 019ad41a-bd3a-4843-84ea-810356541ea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article_title
+    - paragraphs.paragraphs_type.article_text_and_media
+id: paragraph.article_text_and_media.field_article_title
+field_name: field_article_title
+entity_type: paragraph
+bundle: article_text_and_media
+label: article_title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

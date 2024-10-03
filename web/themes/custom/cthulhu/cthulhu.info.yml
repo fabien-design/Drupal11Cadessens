@@ -4,7 +4,6 @@ description: 'cthulhu personnalisé pour Drupal'
 core_version_requirement: ^11 
 package: Lovecraft
 base theme: stable9
-version: '1.0'
 libraries:
   - cthulhu/global-styling
   - cthulhu/global-scripting

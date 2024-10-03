@@ -1,0 +1,61 @@
+uuid: 7fdc6ca7-849b-4582-997e-524ba82d16de
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.services_card
+    - field.field.block_content.services_card.body
+    - field.field.block_content.services_card.field_background_image
+    - field.field.block_content.services_card.field_button_text
+    - field.field.block_content.services_card.field_redirect_button
+  module:
+    - link
+    - media_library
+    - text
+id: block_content.services_card.default
+targetEntityType: block_content
+bundle: services_card
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_background_image:
+    type: media_library_widget
+    weight: 27
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_button_text:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_redirect_button:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

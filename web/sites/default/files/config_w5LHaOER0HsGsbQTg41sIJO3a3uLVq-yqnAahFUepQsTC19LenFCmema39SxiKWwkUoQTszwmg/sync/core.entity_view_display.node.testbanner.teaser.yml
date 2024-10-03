@@ -1,0 +1,30 @@
+uuid: 803edf10-6bcc-42a1-8d6f-7c6c4208a4fd
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.testbanner.field_background_image
+    - field.field.node.testbanner.field_imageforbanner
+    - field.field.node.testbanner.field_redirect_button
+    - field.field.node.testbanner.field_sub_title
+    - field.field.node.testbanner.field_title
+    - node.type.testbanner
+  module:
+    - user
+id: node.testbanner.teaser
+targetEntityType: node
+bundle: testbanner
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_background_image: true
+  field_imageforbanner: true
+  field_redirect_button: true
+  field_sub_title: true
+  field_title: true

@@ -1,0 +1,52 @@
+uuid: 4ce3afcc-5c11-459e-aca6-0498619dd53d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bottom_navigation
+    - paragraphs.paragraphs_type.bottom_navigation
+    - paragraphs.paragraphs_type.decouvrir_section
+  module:
+    - entity_reference_revisions
+id: paragraph.decouvrir_section.field_bottom_navigation
+field_name: field_bottom_navigation
+entity_type: paragraph
+bundle: decouvrir_section
+label: 'bottom navigation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bottom_navigation: bottom_navigation
+    negate: 0
+    target_bundles_drag_drop:
+      bottom_navigation:
+        weight: 9
+        enabled: true
+      contact_button:
+        weight: 10
+        enabled: false
+      decouvrir_section:
+        weight: 11
+        enabled: false
+      footer:
+        weight: 12
+        enabled: false
+      hero_banner:
+        weight: 13
+        enabled: false
+      legal_info:
+        weight: 14
+        enabled: false
+      services_card_container:
+        weight: 15
+        enabled: false
+      social_media:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

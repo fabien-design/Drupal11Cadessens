@@ -1,0 +1,22 @@
+uuid: 73f870f2-0292-4fdf-81e1-74b771ceea06
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: homepage
+label: homepage
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  696491c6-4cd4-4599-8922-f3b40f175c27:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 696491c6-4cd4-4599-8922-f3b40f175c27
+    context_mapping:
+      node: node
+    bundles:
+      page_d_accueil: page_d_accueil
+selection_logic: and
+weight: -5
+relationships: {  }

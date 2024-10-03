@@ -1,0 +1,60 @@
+uuid: cd819827-175e-4532-b51a-42abde371a4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.services_card
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.services_card.body
+    - field.field.block_content.services_card.field_background_image
+    - field.field.block_content.services_card.field_button_text
+    - field.field.block_content.services_card.field_redirect_button
+    - image.style.webp
+  module:
+    - link
+    - media
+    - text
+id: block_content.services_card.full
+targetEntityType: block_content
+bundle: services_card
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_background_image:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: webp
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_button_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_redirect_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

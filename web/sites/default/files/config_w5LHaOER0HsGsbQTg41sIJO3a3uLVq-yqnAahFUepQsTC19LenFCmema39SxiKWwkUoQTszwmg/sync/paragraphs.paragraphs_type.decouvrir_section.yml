@@ -1,0 +1,10 @@
+uuid: 2db8ea76-4679-4b18-91f2-1568f6f2bcda
+langcode: en
+status: true
+dependencies: {  }
+id: decouvrir_section
+label: 'about section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

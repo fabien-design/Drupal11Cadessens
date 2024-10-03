@@ -1,0 +1,25 @@
+uuid: 9ecde399-e865-481e-8a76-454c8ca062ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_button.field_contact_button
+    - paragraphs.paragraphs_type.contact_button
+  module:
+    - link
+id: paragraph.contact_button.default
+targetEntityType: paragraph
+bundle: contact_button
+mode: default
+content:
+  field_contact_button:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

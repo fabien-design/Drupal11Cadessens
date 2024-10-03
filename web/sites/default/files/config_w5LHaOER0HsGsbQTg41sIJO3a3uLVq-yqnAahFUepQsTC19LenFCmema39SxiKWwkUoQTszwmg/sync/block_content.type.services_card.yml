@@ -1,0 +1,8 @@
+uuid: 72dcf718-b7ac-4d34-a46f-05ec00072b22
+langcode: en
+status: true
+dependencies: {  }
+id: services_card
+label: 'services card'
+revision: true
+description: null

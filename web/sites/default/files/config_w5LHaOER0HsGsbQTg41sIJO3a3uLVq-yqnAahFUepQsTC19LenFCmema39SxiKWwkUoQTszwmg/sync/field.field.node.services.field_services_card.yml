@@ -1,0 +1,31 @@
+uuid: 85998a1b-e730-48db-bd2d-bbe295642356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services_card
+    - node.type.services
+    - paragraphs.paragraphs_type.services_card_container
+  module:
+    - entity_reference_revisions
+id: node.services.field_services_card
+field_name: field_services_card
+entity_type: node
+bundle: services
+label: 'services card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      services_card_container: services_card_container
+    negate: 0
+    target_bundles_drag_drop:
+      services_card_container:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

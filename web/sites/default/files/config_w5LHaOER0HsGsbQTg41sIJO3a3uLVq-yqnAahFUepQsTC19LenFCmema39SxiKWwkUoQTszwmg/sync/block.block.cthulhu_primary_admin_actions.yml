@@ -1,0 +1,20 @@
+uuid: 22562f53-bc5b-45f9-98d8-0f0362855f71
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cthulhu
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: cthulhu_primary_admin_actions
+theme: cthulhu
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

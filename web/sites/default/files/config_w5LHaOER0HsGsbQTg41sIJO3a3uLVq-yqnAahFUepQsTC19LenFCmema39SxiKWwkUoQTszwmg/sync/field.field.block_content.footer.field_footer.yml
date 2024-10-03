@@ -1,0 +1,43 @@
+uuid: 36095ac0-a6e5-42a2-aeb8-095269f41f0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_footer
+    - paragraphs.paragraphs_type.footer
+  module:
+    - entity_reference_revisions
+id: block_content.footer.field_footer
+field_name: field_footer
+entity_type: block_content
+bundle: footer
+label: Footer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      footer: footer
+    negate: 0
+    target_bundles_drag_drop:
+      contact_button:
+        weight: 6
+        enabled: false
+      footer:
+        weight: 7
+        enabled: true
+      hero_banner:
+        weight: 8
+        enabled: false
+      services_card_container:
+        weight: 9
+        enabled: false
+      social_media:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

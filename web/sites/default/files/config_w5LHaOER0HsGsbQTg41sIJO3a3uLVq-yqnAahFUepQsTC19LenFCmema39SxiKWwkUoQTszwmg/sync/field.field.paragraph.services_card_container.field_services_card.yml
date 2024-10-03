@@ -1,0 +1,34 @@
+uuid: 1b01000c-18e9-4875-9be2-feacb23ae39a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_services_card
+    - paragraphs.paragraphs_type.services_card_container
+  module:
+    - block_field
+id: paragraph.services_card_container.field_services_card
+field_name: field_services_card
+entity_type: paragraph
+bundle: services_card_container
+label: 'services card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: categories
+  selection_settings:
+    categories:
+      'Content block': 'Content block'
+      Announcements: '0'
+      Block: '0'
+      core: '0'
+      Forms: '0'
+      Help: '0'
+      'Lists (Views)': '0'
+      Menus: '0'
+      System: '0'
+      User: '0'
+field_type: block_field

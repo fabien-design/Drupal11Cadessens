@@ -1,0 +1,24 @@
+uuid: 60cfa121-3d82-4d66-a3b7-d5e6f3107f87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_about_text
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.decouvrir_section
+  module:
+    - text
+id: paragraph.decouvrir_section.field_about_text
+field_name: field_about_text
+entity_type: paragraph
+bundle: decouvrir_section
+label: about_text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 9ae8245f-6758-479f-bfe3-a0633aa30b13
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.responsive_main_navigation
+    - field.storage.block_content.field_responsive_footer
+  module:
+    - block_field
+id: block_content.responsive_main_navigation.field_responsive_footer
+field_name: field_responsive_footer
+entity_type: block_content
+bundle: responsive_main_navigation
+label: 'responsive footer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'block_content:c2aafaab-6404-41c5-9633-f12b87b6b673': 'block_content:c2aafaab-6404-41c5-9633-f12b87b6b673'
+field_type: block_field

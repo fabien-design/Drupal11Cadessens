@@ -1,0 +1,49 @@
+uuid: 4c3a7fef-25d0-41a5-8cde-933afb6d3c3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_section
+    - node.type.decouvrir
+    - paragraphs.paragraphs_type.decouvrir_section
+  module:
+    - entity_reference_revisions
+id: node.decouvrir.field_about_section
+field_name: field_about_section
+entity_type: node
+bundle: decouvrir
+label: about_section
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      decouvrir_section: decouvrir_section
+    negate: 0
+    target_bundles_drag_drop:
+      contact_button:
+        weight: 8
+        enabled: false
+      decouvrir_section:
+        weight: 9
+        enabled: true
+      footer:
+        weight: 10
+        enabled: false
+      hero_banner:
+        weight: 11
+        enabled: false
+      legal_info:
+        weight: 12
+        enabled: false
+      services_card_container:
+        weight: 13
+        enabled: false
+      social_media:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

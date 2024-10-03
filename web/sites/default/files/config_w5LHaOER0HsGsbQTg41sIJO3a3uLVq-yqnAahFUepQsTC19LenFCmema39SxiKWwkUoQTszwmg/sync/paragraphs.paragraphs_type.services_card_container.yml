@@ -1,0 +1,10 @@
+uuid: d1cd34a2-d5ae-454a-8c15-ea536d19b674
+langcode: en
+status: true
+dependencies: {  }
+id: services_card_container
+label: 'services card container'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

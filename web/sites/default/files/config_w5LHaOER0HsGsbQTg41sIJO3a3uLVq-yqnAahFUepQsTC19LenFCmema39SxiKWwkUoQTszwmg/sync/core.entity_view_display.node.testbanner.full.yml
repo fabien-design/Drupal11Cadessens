@@ -1,0 +1,53 @@
+uuid: 357c5a5b-a328-4e64-94ce-6c7d901b6d59
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.testbanner.field_background_image
+    - field.field.node.testbanner.field_imageforbanner
+    - field.field.node.testbanner.field_redirect_button
+    - field.field.node.testbanner.field_sub_title
+    - field.field.node.testbanner.field_title
+    - node.type.testbanner
+  module:
+    - image
+    - link
+    - user
+id: node.testbanner.full
+targetEntityType: node
+bundle: testbanner
+mode: full
+content:
+  field_imageforbanner:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_redirect_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_background_image: true
+  field_sub_title: true
+  field_title: true

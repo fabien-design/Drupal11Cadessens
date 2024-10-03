@@ -1,0 +1,55 @@
+uuid: 99ef9b5e-312a-4135-b55b-cb8c75f81970
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_media_and_text
+    - node.type.decouvrir
+    - paragraphs.paragraphs_type.testchooseorder
+  module:
+    - entity_reference_revisions
+id: node.decouvrir.field_position_media_and_text
+field_name: field_position_media_and_text
+entity_type: node
+bundle: decouvrir
+label: 'position media and text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      testchooseorder: testchooseorder
+    negate: 0
+    target_bundles_drag_drop:
+      bottom_navigation:
+        weight: 10
+        enabled: false
+      contact_button:
+        weight: 11
+        enabled: false
+      decouvrir_section:
+        weight: 12
+        enabled: false
+      footer:
+        weight: 13
+        enabled: false
+      hero_banner:
+        weight: 14
+        enabled: false
+      legal_info:
+        weight: 15
+        enabled: false
+      services_card_container:
+        weight: 16
+        enabled: false
+      social_media:
+        weight: 17
+        enabled: false
+      testchooseorder:
+        weight: 18
+        enabled: true
+field_type: entity_reference_revisions

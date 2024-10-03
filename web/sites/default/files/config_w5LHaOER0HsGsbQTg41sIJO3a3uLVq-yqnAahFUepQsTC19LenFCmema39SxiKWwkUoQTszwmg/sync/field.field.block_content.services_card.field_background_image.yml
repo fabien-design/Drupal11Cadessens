@@ -1,0 +1,29 @@
+uuid: 9354a174-a3bf-43b5-8ec2-019297980a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.services_card
+    - field.storage.block_content.field_background_image
+    - media.type.image
+id: block_content.services_card.field_background_image
+field_name: field_background_image
+entity_type: block_content
+bundle: services_card
+label: 'background image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

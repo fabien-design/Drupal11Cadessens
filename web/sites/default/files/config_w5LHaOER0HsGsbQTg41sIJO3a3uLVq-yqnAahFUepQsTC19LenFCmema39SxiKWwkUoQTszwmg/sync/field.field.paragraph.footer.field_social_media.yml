@@ -1,0 +1,43 @@
+uuid: 35873c40-64ab-4063-b142-522663a16080
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media
+    - paragraphs.paragraphs_type.footer
+    - paragraphs.paragraphs_type.social_media
+  module:
+    - entity_reference_revisions
+id: paragraph.footer.field_social_media
+field_name: field_social_media
+entity_type: paragraph
+bundle: footer
+label: social_media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_media: social_media
+    negate: 0
+    target_bundles_drag_drop:
+      contact_button:
+        weight: 6
+        enabled: false
+      footer:
+        weight: 7
+        enabled: false
+      hero_banner:
+        weight: 8
+        enabled: false
+      services_card_container:
+        weight: 9
+        enabled: false
+      social_media:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,17 @@
+uuid: ba245119-ea6a-4ebe-8dfe-afd44f7dee38
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: services
+type: services
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

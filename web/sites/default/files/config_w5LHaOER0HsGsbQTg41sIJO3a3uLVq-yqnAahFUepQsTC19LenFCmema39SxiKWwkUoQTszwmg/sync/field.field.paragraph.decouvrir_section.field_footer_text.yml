@@ -1,0 +1,24 @@
+uuid: 76fa81e7-7a59-49ad-9a90-1c4cb08d9c71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer_text
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.decouvrir_section
+  module:
+    - text
+id: paragraph.decouvrir_section.field_footer_text
+field_name: field_footer_text
+entity_type: paragraph
+bundle: decouvrir_section
+label: footer_text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

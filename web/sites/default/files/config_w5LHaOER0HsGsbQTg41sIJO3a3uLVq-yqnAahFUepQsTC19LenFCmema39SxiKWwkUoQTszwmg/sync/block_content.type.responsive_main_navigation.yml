@@ -1,0 +1,8 @@
+uuid: 8749f3f9-f1fc-4e91-9b13-919fd66c61d3
+langcode: en
+status: true
+dependencies: {  }
+id: responsive_main_navigation
+label: 'Responsive main navigation'
+revision: false
+description: null

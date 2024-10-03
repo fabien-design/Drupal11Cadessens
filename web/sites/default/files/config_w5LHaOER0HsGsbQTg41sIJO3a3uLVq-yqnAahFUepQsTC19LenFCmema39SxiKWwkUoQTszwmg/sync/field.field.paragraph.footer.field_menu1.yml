@@ -1,0 +1,26 @@
+uuid: b4919625-8249-437d-9869-afb1e20492fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu1
+    - paragraphs.paragraphs_type.footer
+  module:
+    - block_field
+id: paragraph.footer.field_menu1
+field_name: field_menu1
+entity_type: paragraph
+bundle: footer
+label: menu1
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'system_menu_block:footer': 'system_menu_block:footer'
+      'system_menu_block:main': 'system_menu_block:main'
+field_type: block_field

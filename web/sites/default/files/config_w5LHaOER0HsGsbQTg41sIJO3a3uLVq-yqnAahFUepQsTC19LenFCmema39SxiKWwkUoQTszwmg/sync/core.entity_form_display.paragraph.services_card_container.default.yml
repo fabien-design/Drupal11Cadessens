@@ -1,0 +1,26 @@
+uuid: 7f8013cf-3454-4bb5-8912-69b8c5432445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_card_container.field_services_card
+    - paragraphs.paragraphs_type.services_card_container
+  module:
+    - block_field
+id: paragraph.services_card_container.default
+targetEntityType: paragraph
+bundle: services_card_container
+mode: default
+content:
+  field_services_card:
+    type: block_field_default
+    weight: 0
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

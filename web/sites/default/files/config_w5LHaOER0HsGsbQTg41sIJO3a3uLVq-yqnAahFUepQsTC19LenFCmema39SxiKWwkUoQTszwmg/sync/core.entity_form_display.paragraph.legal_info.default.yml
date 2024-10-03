@@ -1,0 +1,34 @@
+uuid: d7d39aab-92ab-4ada-9cd8-0997efdca5d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.legal_info.field_conditions_generales
+    - field.field.paragraph.legal_info.field_mentions_legales
+    - paragraphs.paragraphs_type.legal_info
+  module:
+    - link
+id: paragraph.legal_info.default
+targetEntityType: paragraph
+bundle: legal_info
+mode: default
+content:
+  field_conditions_generales:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_mentions_legales:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

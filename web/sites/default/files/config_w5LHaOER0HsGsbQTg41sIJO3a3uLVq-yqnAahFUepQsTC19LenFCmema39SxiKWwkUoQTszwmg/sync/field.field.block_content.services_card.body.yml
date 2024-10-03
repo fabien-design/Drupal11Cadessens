@@ -1,0 +1,26 @@
+uuid: f6bb3b52-9854-40ad-aae5-8ddee22008e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.services_card
+    - field.storage.block_content.body
+    - filter.format.plain_text
+  module:
+    - text
+id: block_content.services_card.body
+field_name: body
+entity_type: block_content
+bundle: services_card
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - plain_text
+field_type: text_with_summary

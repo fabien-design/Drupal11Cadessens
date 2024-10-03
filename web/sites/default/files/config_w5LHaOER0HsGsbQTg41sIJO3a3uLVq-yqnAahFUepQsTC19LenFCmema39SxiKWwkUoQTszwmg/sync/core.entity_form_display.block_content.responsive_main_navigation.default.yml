@@ -1,0 +1,42 @@
+uuid: c5ae5e83-3709-4c8e-8794-1c0edfe87f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.responsive_main_navigation
+    - field.field.block_content.responsive_main_navigation.field_main_navigation
+    - field.field.block_content.responsive_main_navigation.field_responsive_footer
+  module:
+    - block_field
+id: block_content.responsive_main_navigation.default
+targetEntityType: block_content
+bundle: responsive_main_navigation
+mode: default
+content:
+  field_main_navigation:
+    type: block_field_default
+    weight: 26
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+  field_responsive_footer:
+    type: block_field_default
+    weight: 27
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

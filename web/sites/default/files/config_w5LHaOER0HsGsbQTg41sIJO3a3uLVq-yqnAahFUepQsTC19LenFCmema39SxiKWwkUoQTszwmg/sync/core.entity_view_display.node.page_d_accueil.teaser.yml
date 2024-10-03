@@ -1,0 +1,26 @@
+uuid: 19888f3a-7fca-4633-99e7-e0c219eda605
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page_d_accueil.field_contact
+    - field.field.node.page_d_accueil.field_hero_banner
+    - field.field.node.page_d_accueil.field_our_services_section
+    - node.type.page_d_accueil
+  module:
+    - user
+id: node.page_d_accueil.teaser
+targetEntityType: node
+bundle: page_d_accueil
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contact: true
+  field_hero_banner: true
+  field_our_services_section: true

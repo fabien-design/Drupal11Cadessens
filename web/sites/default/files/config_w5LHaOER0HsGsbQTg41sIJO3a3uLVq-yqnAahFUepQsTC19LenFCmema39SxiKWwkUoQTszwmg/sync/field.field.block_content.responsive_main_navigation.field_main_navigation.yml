@@ -1,0 +1,25 @@
+uuid: fdee0f51-1535-4256-b47d-e54a37993a0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.responsive_main_navigation
+    - field.storage.block_content.field_main_navigation
+  module:
+    - block_field
+id: block_content.responsive_main_navigation.field_main_navigation
+field_name: field_main_navigation
+entity_type: block_content
+bundle: responsive_main_navigation
+label: 'Main navigation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'system_menu_block:main': 'system_menu_block:main'
+field_type: block_field

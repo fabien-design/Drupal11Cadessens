@@ -1,0 +1,23 @@
+uuid: 58d1260c-fbdb-4c92-88a5-c2dd039df894
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mentions_legales
+    - paragraphs.paragraphs_type.legal_info
+  module:
+    - link
+id: paragraph.legal_info.field_mentions_legales
+field_name: field_mentions_legales
+entity_type: paragraph
+bundle: legal_info
+label: 'Mentions légales'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

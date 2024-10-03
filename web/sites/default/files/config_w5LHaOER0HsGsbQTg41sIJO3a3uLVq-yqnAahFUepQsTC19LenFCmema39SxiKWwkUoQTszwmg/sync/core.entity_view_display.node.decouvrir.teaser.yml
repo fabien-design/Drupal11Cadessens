@@ -1,0 +1,26 @@
+uuid: 40f21e6f-db8b-4316-a54b-6c9522add2c5
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.decouvrir.field_about_section
+    - field.field.node.decouvrir.field_page_banner
+    - field.field.node.decouvrir.field_position_media_and_text
+    - node.type.decouvrir
+  module:
+    - user
+id: node.decouvrir.teaser
+targetEntityType: node
+bundle: decouvrir
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_about_section: true
+  field_page_banner: true
+  field_position_media_and_text: true

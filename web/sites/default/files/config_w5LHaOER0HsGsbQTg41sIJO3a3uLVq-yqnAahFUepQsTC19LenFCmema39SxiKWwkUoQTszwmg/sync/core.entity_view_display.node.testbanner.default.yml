@@ -1,0 +1,73 @@
+uuid: f431600a-a09c-4fdd-aa3c-fdb8168c6110
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testbanner.field_background_image
+    - field.field.node.testbanner.field_imageforbanner
+    - field.field.node.testbanner.field_redirect_button
+    - field.field.node.testbanner.field_sub_title
+    - field.field.node.testbanner.field_title
+    - node.type.testbanner
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.testbanner.default
+targetEntityType: node
+bundle: testbanner
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_imageforbanner:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_redirect_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_sub_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

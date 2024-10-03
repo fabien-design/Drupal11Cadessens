@@ -1,0 +1,25 @@
+uuid: 7e164fa7-bd0a-41e9-ac93-924859861344
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:c2aafaab-6404-41c5-9633-f12b87b6b673'
+  module:
+    - block_content
+  theme:
+    - cthulhu
+id: cthulhu_footer_content
+theme: cthulhu
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:c2aafaab-6404-41c5-9633-f12b87b6b673'
+settings:
+  id: 'block_content:c2aafaab-6404-41c5-9633-f12b87b6b673'
+  label: footer_content
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

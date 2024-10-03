@@ -1,0 +1,23 @@
+uuid: 046e994a-e8bd-4813-8680-5ba0fdc68496
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_choose_order
+    - paragraphs.paragraphs_type.article_text_and_media
+  module:
+    - options
+id: paragraph.article_text_and_media.field_choose_order
+field_name: field_choose_order
+entity_type: paragraph
+bundle: article_text_and_media
+label: 'choose order'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text_left_and_img_right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

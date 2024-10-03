@@ -1,0 +1,23 @@
+uuid: 780334a7-10e5-4978-98d8-1f1bb948e442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_centrer_contenu
+    - paragraphs.paragraphs_type.testchooseorder
+id: paragraph.testchooseorder.field_centrer_contenu
+field_name: field_centrer_contenu
+entity_type: paragraph
+bundle: testchooseorder
+label: 'centrer le contenu'
+description: 'le texte sera centrer, par défaut  choisissez non.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

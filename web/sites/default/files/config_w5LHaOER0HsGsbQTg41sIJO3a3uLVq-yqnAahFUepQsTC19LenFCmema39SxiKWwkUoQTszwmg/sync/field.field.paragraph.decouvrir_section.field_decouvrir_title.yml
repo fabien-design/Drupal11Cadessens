@@ -1,0 +1,19 @@
+uuid: 311488c9-ce49-47d3-956e-217b3933cc15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_decouvrir_title
+    - paragraphs.paragraphs_type.decouvrir_section
+id: paragraph.decouvrir_section.field_decouvrir_title
+field_name: field_decouvrir_title
+entity_type: paragraph
+bundle: decouvrir_section
+label: 'decouvrir title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

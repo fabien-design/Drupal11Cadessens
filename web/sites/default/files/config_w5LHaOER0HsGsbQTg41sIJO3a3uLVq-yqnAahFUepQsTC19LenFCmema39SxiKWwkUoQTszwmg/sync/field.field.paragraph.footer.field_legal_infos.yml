@@ -1,0 +1,46 @@
+uuid: fe019ab5-5e2d-4094-8789-7db3363f9c49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_legal_infos
+    - paragraphs.paragraphs_type.footer
+    - paragraphs.paragraphs_type.legal_info
+  module:
+    - entity_reference_revisions
+id: paragraph.footer.field_legal_infos
+field_name: field_legal_infos
+entity_type: paragraph
+bundle: footer
+label: legal-infos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      legal_info: legal_info
+    negate: 0
+    target_bundles_drag_drop:
+      contact_button:
+        weight: 7
+        enabled: false
+      footer:
+        weight: 8
+        enabled: false
+      hero_banner:
+        weight: 9
+        enabled: false
+      legal_info:
+        weight: 10
+        enabled: true
+      services_card_container:
+        weight: 11
+        enabled: false
+      social_media:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

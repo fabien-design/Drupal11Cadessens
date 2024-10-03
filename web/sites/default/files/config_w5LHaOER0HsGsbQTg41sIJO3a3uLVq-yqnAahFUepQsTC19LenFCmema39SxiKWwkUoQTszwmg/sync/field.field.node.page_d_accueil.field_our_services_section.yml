@@ -1,0 +1,37 @@
+uuid: 3ff668be-af26-404e-b06c-d04f37db32db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_our_services_section
+    - node.type.page_d_accueil
+    - paragraphs.paragraphs_type.services_card_container
+  module:
+    - entity_reference_revisions
+id: node.page_d_accueil.field_our_services_section
+field_name: field_our_services_section
+entity_type: node
+bundle: page_d_accueil
+label: 'NOS SERVICES'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      services_card_container: services_card_container
+    negate: 0
+    target_bundles_drag_drop:
+      contact_button:
+        weight: 4
+        enabled: false
+      hero_banner:
+        weight: 5
+        enabled: false
+      services_card_container:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

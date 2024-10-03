@@ -1,0 +1,51 @@
+uuid: 936cac0c-6ddb-482e-bd42-6b850df3ec95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_text_and_media.field_article_title
+    - field.field.paragraph.article_text_and_media.field_bottom_navigation
+    - field.field.paragraph.article_text_and_media.field_choose_order
+    - paragraphs.paragraphs_type.article_text_and_media
+  module:
+    - paragraphs
+id: paragraph.article_text_and_media.default
+targetEntityType: paragraph
+bundle: article_text_and_media
+mode: default
+content:
+  field_article_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bottom_navigation:
+    type: paragraphs
+    weight: 5
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_choose_order:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,56 @@
+uuid: d449199e-a461-452f-8d4e-093bb142757c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testchooseorder.field_aside_image
+    - field.field.paragraph.testchooseorder.field_body
+    - field.field.paragraph.testchooseorder.field_centrer_contenu
+    - field.field.paragraph.testchooseorder.field_choose_order
+    - image.style.webp
+    - paragraphs.paragraphs_type.testchooseorder
+  module:
+    - media
+    - options
+    - text
+id: paragraph.testchooseorder.default
+targetEntityType: paragraph
+bundle: testchooseorder
+mode: default
+content:
+  field_aside_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: webp
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_centrer_contenu:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_choose_order:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

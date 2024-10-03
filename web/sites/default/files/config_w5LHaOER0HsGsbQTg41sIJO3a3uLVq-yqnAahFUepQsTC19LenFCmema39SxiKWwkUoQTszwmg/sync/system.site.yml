@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: b413ca86-baea-4724-b1cc-16bb8b2dd915
+name: drupalTest
+mail: a2kpax@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/13
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

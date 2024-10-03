@@ -1,0 +1,10 @@
+uuid: 03385c75-1571-499c-b2c6-141b9d6fa93e
+langcode: en
+status: true
+dependencies: {  }
+id: bottom_navigation
+label: 'bottom navigation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

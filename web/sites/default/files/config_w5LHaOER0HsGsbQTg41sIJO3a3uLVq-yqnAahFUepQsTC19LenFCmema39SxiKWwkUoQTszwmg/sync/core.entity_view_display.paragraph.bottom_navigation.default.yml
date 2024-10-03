@@ -1,0 +1,27 @@
+uuid: 1533a338-fb8c-4801-8fb8-ca349df70232
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bottom_navigation.field_contact_button
+    - paragraphs.paragraphs_type.bottom_navigation
+  module:
+    - link
+id: paragraph.bottom_navigation.default
+targetEntityType: paragraph
+bundle: bottom_navigation
+mode: default
+content:
+  field_contact_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

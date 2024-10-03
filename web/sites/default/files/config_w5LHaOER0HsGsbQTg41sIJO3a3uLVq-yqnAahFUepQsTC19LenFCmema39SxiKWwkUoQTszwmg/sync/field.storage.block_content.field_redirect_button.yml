@@ -1,0 +1,19 @@
+uuid: 3a9a8efd-65c7-420a-9547-b3ff1bfbfb78
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_redirect_button
+field_name: field_redirect_button
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

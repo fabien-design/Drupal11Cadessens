@@ -1,0 +1,49 @@
+uuid: 5b845424-1f3d-4b82-87dd-69e6ade86ce1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.decouvrir.field_about_section
+    - field.field.node.decouvrir.field_page_banner
+    - field.field.node.decouvrir.field_position_media_and_text
+    - node.type.decouvrir
+  module:
+    - entity_reference_revisions
+    - media
+    - user
+id: node.decouvrir.default
+targetEntityType: node
+bundle: decouvrir
+mode: default
+content:
+  field_about_section:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_page_banner:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_position_media_and_text:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true

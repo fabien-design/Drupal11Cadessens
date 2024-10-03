@@ -1,0 +1,23 @@
+uuid: dde951e7-64a9-4e4a-9838-c3810465d130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_discover_button
+    - paragraphs.paragraphs_type.hero_banner
+  module:
+    - link
+id: paragraph.hero_banner.field_discover_button
+field_name: field_discover_button
+entity_type: paragraph
+bundle: hero_banner
+label: discover_button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

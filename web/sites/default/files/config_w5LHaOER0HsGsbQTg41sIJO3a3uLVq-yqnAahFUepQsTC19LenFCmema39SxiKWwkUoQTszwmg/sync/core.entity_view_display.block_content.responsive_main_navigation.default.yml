@@ -1,0 +1,30 @@
+uuid: 2b250a64-2d04-40f0-8483-e77f6543f3fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.responsive_main_navigation
+    - field.field.block_content.responsive_main_navigation.field_main_navigation
+    - field.field.block_content.responsive_main_navigation.field_responsive_footer
+  module:
+    - block_field
+id: block_content.responsive_main_navigation.default
+targetEntityType: block_content
+bundle: responsive_main_navigation
+mode: default
+content:
+  field_main_navigation:
+    type: block_field
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_responsive_footer:
+    type: block_field
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

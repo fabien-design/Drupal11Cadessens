@@ -1,0 +1,22 @@
+uuid: 5db19a21-3ddd-4775-8c77-4dbc46c0d75a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: page_name
+label: 'page name '
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  ef266366-0aa1-4ab9-921f-62152b0df7b0:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ef266366-0aa1-4ab9-921f-62152b0df7b0
+    context_mapping:
+      node: node
+    bundles:
+      decouvrir: decouvrir
+selection_logic: and
+weight: -5
+relationships: {  }
